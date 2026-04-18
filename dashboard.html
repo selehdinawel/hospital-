@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="webcss/web.css">
+</head>
+<body class="dr">
+<section >
+    <div class="container1">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Admin Panel</h2>
+                <p>Kabul Hospital</p>
+            </div>
+            <nav>
+                <ul>
+                    <li onclick="showSection('dashboard')" id="nav-dashboard" class="active">Dashboard</li>
+                    <li onclick="showSection('appointments')" id="nav-appointments">Appointments</li>
+                   
+                   <div class="btn-back"><a href="index.html"><h1>🏐back to site</h1></a></div>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            
+            <section id="dashboard-section">
+                <h1>Dashboard</h1>
+                <div class="stats-container">
+                    <div class="card1"><h3>0</h3><p>Total Appointments</p></div>
+                    <div class="card1"><h3>4</h3><p>Doctors</p></div>
+                    <div class="card1"><h3>0</h3><p>Patients</p></div>
+                </div>
+                <h3>Recent Appointments</h3>
+                <div id="recent-appointments-list">
+                    <p class="empty-state"> no appointment yet.</p>
+                </div>
+               
+            </section>
+
+            <section id="appointments-section" style="display: none;">
+                <h1>All Appointments</h1>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>full name</th>
+                            <th>email</th>
+                            <th>phone</th>
+                            <th>department</th>
+                            <th>date</th>
+                            <th>time</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointments-table"></tbody>
+                </table>
+                </section>
+                
+               <section id="booking-section" style="display: none;">
+                <h1>Book New Appointment</h1>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Selehdin Awel">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="awelselehdin@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="0994567976">
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department:</label>
+                        <input type="text" id="department" name="department" required placeholder="Ophthalmology">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required value="2026-04-27">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required value="12:47">
+                    </div>
+
+
+                <div class="empty-state">
+                 <div class="some">✉️</div>  
+                    <p>No appointments found.</p>
+                    <a href="appointement.html" class="btn-primary">Book first appointment</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</section>
+
+    <script src="webjavascript/web.js"></script>
+</body>
+</html>
